@@ -100,7 +100,7 @@ _INSTRUCTIONS: The following deliverables should be officially posted to your My
 ### Project development roadmap
 
 ```mermaid
-<flowchart TB
+flowchart TB
     start([Start]) --> step1
 
     subgraph Preparation[Preparation Phase]
@@ -176,7 +176,8 @@ _INSTRUCTIONS: The following deliverables should be officially posted to your My
     class step8,step9,step10,copilot,chatgpt,claude,perplexity execution
     class step11 analysis
     class step3,evaluate,feedback iteration
-    class step4,step5 outcomes>
+    class step4,step5 outcomes
+```
 
 
 

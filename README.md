@@ -113,11 +113,6 @@ flowchart TB
 ```
 
 
-
-See below for our proposed schedule on next steps after Call for Code 2024 submission.
-
-![Roadmap](./images/roadmap.jpg)
-
 ## Additional details
 
 _INSTRUCTIONS: The following deliverables are suggested, but **optional**. Additional details like this can help the judges better review your solution. Remove any sections you are not using._
@@ -130,6 +125,5 @@ INSTRUCTIONS: In this section you add the instructions to run your project on yo
 
 You can find a running system to test at...
 
-See our [description document](./docs/DESCRIPTION.md) for log in credentials.
 
 ---

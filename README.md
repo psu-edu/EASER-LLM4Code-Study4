@@ -2,11 +2,6 @@
 
 _INSTRUCTIONS: This GitHub repository serves as a template and example you can use to create a well documented README for your project for the [2024 Call for Code Global Challenge](https://developer.ibm.com/callforcode/global-challenge/)._
 
-Your required deliverables and project descriptions should be officially submitted to your My Team > Submissions section of the [Call for Code Global Challenge web site](https://compete.callforcode.skillsnetwork.site/competitions/2024-call-for-code-global-challenge), but you can also optionally include them here for completeness, as it is good practice to clearly document your project in your README file. Replace the examples seen here with your own deliverable links.
-
-Use the **Use this template** button to create a new version of this repository and start entering content for your own Call for Code submission project. Make sure you have [registered for the 2024 Call for Code Global Challenge](https://www.ibm.com/account/reg/signup?formid=urx-52643) to access resources and full project submission instructions. Remove any "INSTRUCTIONS" sections when you are ready to submit your project.
-
-_New to Git and GitHub? This free online course will get you up to speed quickly: [Getting Started with Git and GitHub](https://www.coursera.org/learn/getting-started-with-git-and-github)_.
 
 # Replace this heading with your team/submission name
 
@@ -104,13 +99,86 @@ _INSTRUCTIONS: The following deliverables should be officially posted to your My
 
 ### Project development roadmap
 
-The project currently does the following things.
+```mermaid
+flowchart TB
+    start([Start]) --> step1
 
-- Feature 1
-- Feature 2
-- Feature 3
+    subgraph Preparation[Preparation Phase]
+        step1[1. Select Stratascratch as Problem Source]
+        step2[2. Select 1 Problem per Task Category]
+        
+        subgraph PromptEngineering[Prompt Engineering Iteration]
+            direction TB
+            step3[3. Prompt Engineering]
+            evaluate[Evaluate AI Assistants]
+            feedback[Adjust Prompts Based on Performance]
+            
+            step3 --> evaluate
+            evaluate --> feedback
+            feedback -->|Iterate until satisfactory| step3
+        end
 
-In the future we plan to...
+        subgraph Outcomes[Iteration Outcomes]
+            direction TB
+            step4[4. Final Selection of 4 AI Assistants and LLMs]
+            step5[5. Final Prompt Templates]
+        end
+
+        step6[6. Select 100 Data Science Problems]
+        step7[7. Create 100 Prompts Using Templates]
+
+        step1 --> step2
+        step2 --> PromptEngineering
+        
+        %% Show outcomes flowing from the iteration process
+        PromptEngineering --> |Results in| Outcomes
+        Outcomes --> step6
+        step6 --> step7
+    end
+
+    subgraph Execution[Execution Phase]
+        step8[8. Execute Each Prompt with AI Assistants]
+        copilot[Assistant 1: Microsoft Copilot]
+        chatgpt[Assistant 2: ChatGPT]
+        claude[Assistant 3: Claude]
+        perplexity[Assistant 4: Perplexity Labs]
+        
+        step8 --> copilot
+        step8 --> chatgpt
+        step8 --> claude
+        step8 --> perplexity
+        
+        step9[9. Submit Code to Stratascratch Platform]
+        copilot --> step9
+        chatgpt --> step9
+        claude --> step9
+        perplexity --> step9
+        
+        step10[10. Execute Code and Save Results]
+        step9 --> step10
+    end
+
+    subgraph Analysis[Analysis Phase]
+        step11[11. Data Analysis: Compare Performance Results]
+    end
+
+    step7 --> step8
+    step10 --> step11
+    step11 --> endNode([End])
+
+    classDef preparation fill:#e1f3d8,stroke:#82c366
+    classDef execution fill:#dae8fc,stroke:#6c8ebf
+    classDef analysis fill:#ffe6cc,stroke:#d79b00
+    classDef iteration fill:#fff2cc,stroke:#d6b656,stroke-width:3px
+    classDef outcomes fill:#ffe6cc,stroke:#d6b656,stroke-width:2px
+    
+    class step1,step2,step6,step7 preparation
+    class step8,step9,step10,copilot,chatgpt,claude,perplexity execution
+    class step11 analysis
+    class step3,evaluate,feedback iteration
+    class step4,step5 outcomes
+
+
 
 See below for our proposed schedule on next steps after Call for Code 2024 submission.
 
